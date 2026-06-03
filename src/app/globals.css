@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables CSS de la paleta — usables en estilos que Tailwind no cubre */
+:root {
+  --color-bg:        #1a0f07;
+  --color-surface:   #231508;
+  --color-surface2:  #2e1c0a;
+  --color-surface3:  #3a230d;
+  --color-gold:      #c99e4c;
+  --color-gold-light:#e8c97a;
+  --color-cream:     #f5ead8;
+  --color-green:     #4a7c59;
+  --color-red:       #c0392b;
+}
+
+/* Scrollbar sutil — preserva el diseño del prototipo */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-thumb {
+  background: rgba(201,158,76,0.35);
+  border-radius: 2px;
+}
+
+/* Ocultar scrollbar horizontal en los filtros de categoría (móvil) */
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Animaciones usadas en modales y toasts */
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+@keyframes fadeIn {
+  from { transform: translateY(6px); opacity: 0; }
+  to   { transform: translateY(0);   opacity: 1; }
+}
+@keyframes toastIn {
+  from { transform: translateY(12px) translateX(-50%); opacity: 0; }
+  to   { transform: translateY(0)    translateX(-50%); opacity: 1; }
+}
+
+.animate-slide-up  { animation: slideUp 0.35s cubic-bezier(0.34,1.56,0.64,1) both; }
+.animate-fade-in   { animation: fadeIn  0.4s ease both; }
+.animate-toast-in  { animation: toastIn 0.3s cubic-bezier(0.34,1.56,0.64,1) both; }
