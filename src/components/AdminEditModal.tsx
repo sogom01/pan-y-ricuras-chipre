@@ -15,7 +15,7 @@ import {
 // ── Tipos ─────────────────────────────────────────────────────────────────────
 
 interface FormState {
-  id?:         string;
+  id:          string | undefined;
   nombre:      string;
   descripcion: string;
   precio:      number | "";
