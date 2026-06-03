@@ -33,7 +33,6 @@ const EMPTY_ITEM: Partial<MenuItem> = {
   nombre:      "",
   descripcion: "",
   emoji:       "🍽️",
-  precio:      undefined,
   cat:         "🥐 Panadería",
   destacado:   false,
   disponible:  true,
