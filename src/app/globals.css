@@ -43,3 +43,29 @@
 .animate-slide-up  { animation: slideUp 0.35s cubic-bezier(0.34,1.56,0.64,1) both; }
 .animate-fade-in   { animation: fadeIn  0.4s ease both; }
 .animate-toast-in  { animation: toastIn 0.3s cubic-bezier(0.34,1.56,0.64,1) both; }
+
+/* Efecto pasar página (libro) */
+@keyframes pageFlipForward {
+  from {
+    opacity: 0.5;
+    transform: perspective(1200px) rotateY(-18deg) translateX(40px) scale(0.97);
+    transform-origin: left center;
+  }
+  to {
+    opacity: 1;
+    transform: perspective(1200px) rotateY(0deg) translateX(0) scale(1);
+  }
+}
+@keyframes pageFlipBackward {
+  from {
+    opacity: 0.5;
+    transform: perspective(1200px) rotateY(18deg) translateX(-40px) scale(0.97);
+    transform-origin: right center;
+  }
+  to {
+    opacity: 1;
+    transform: perspective(1200px) rotateY(0deg) translateX(0) scale(1);
+  }
+}
+.animate-page-forward  { animation: pageFlipForward  0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.animate-page-backward { animation: pageFlipBackward 0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
